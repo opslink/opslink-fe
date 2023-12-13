@@ -1,5 +1,6 @@
 import React from 'react'
 import { Layout } from '@douyinfe/semi-ui'
+import OpsSider from './components/opsSider'
 
 const { Header, Footer, Content } = Layout
 function _Layout({ children }: React.PropsWithChildren) {
@@ -10,11 +11,9 @@ function _Layout({ children }: React.PropsWithChildren) {
   }
   return (
     <Layout className="w-full h-full">
-      <Header style={commonStyle}>Header</Header>
+      <OpsSider />
       <Content>{children}</Content>
-      <Footer style={commonStyle}>Footer</Footer>
     </Layout>
-
   )
 }
 
