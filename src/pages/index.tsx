@@ -5,7 +5,7 @@ function Page() {
   return (
     <div>
       Page
-      <Button>onClick</Button>
+     <button className='btn'>button</button>
     </div>
   )
 }
