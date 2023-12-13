@@ -1,14 +1,19 @@
 import React from 'react'
 import { Layout } from '@douyinfe/semi-ui'
-import DSider from './components/DSider'
 
-const { Header, Footer, Content,Sider } = Layout
+const { Header, Footer, Content } = Layout
 function _Layout({ children }: React.PropsWithChildren) {
+  const commonStyle = {
+    height: 64,
+    lineHeight: '64px',
+    background: 'var(--semi-color-fill-0)',
+  }
   return (
-    <div className="w-full h-full flex flex-row">
-        <DSider/>
+    <Layout className="w-full h-full">
+      <Header style={commonStyle}>Header</Header>
       <Content>{children}</Content>
-    </div>
+      <Footer style={commonStyle}>Footer</Footer>
+    </Layout>
 
   )
 }
