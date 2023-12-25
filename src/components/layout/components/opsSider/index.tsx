@@ -5,7 +5,7 @@ import menuList from './common/menu'
 const { Sider } = Layout
 const { Title } = Typography
 function OpsSider() {
-  const [selectedKeys, setSelectedKeys] = useState(['1'])
+  const [selectedKeys, setSelectedKeys] = useState(['home'])
   const [openKeys, setOpenKeys] = useState<any[]>([])
 
   const onOpenChange = (data: any) => {
@@ -13,6 +13,7 @@ function OpsSider() {
   }
 
   const onSelect = (data: any) => {
+    console.log('🚀 ~ file: index.tsx:16 ~ onSelect ~ data:', data)
     setSelectedKeys([...data.selectedKeys])
   }
   return (
