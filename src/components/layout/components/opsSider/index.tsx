@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Layout, Nav, Typography } from '@douyinfe/semi-ui'
 import menuList from './common/menu'
+import OpsFooter from './opsFooter'
 
 const { Sider } = Layout
 const { Title } = Typography
@@ -29,7 +30,9 @@ function OpsSider() {
           </div>
         )}
         items={menuList}
-        footer={<div>footer</div>}
+        footer={{
+          children: <OpsFooter />,
+        }}
         openKeys={openKeys}
         selectedKeys={selectedKeys}
         onOpenChange={onOpenChange}
