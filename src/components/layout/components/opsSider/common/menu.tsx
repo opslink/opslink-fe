@@ -1,4 +1,4 @@
-import { IconBox, IconGridView, IconHome } from '@douyinfe/semi-icons'
+import { IconBox, IconGridView, IconHome, IconSetting } from '@douyinfe/semi-icons'
 import type { NavItems } from '@douyinfe/semi-ui/lib/es/navigation'
 
 const menuList: NavItems = [
@@ -23,6 +23,10 @@ const menuList: NavItems = [
       { itemKey: 'configManagement', text: '配置管理' },
     ],
   },
+]
+
+export const settingMenuList: NavItems = [
+  { itemKey: 'setting', text: '设置', icon: <IconSetting /> },
 ]
 
 export default menuList

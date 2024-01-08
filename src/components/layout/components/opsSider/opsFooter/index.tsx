@@ -4,7 +4,11 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import getGreeting from '@/utils/greeting'
 
-function OpsFooter(): React.ReactNode {
+interface Props {
+  goSetting: () => void
+}
+
+function OpsFooter({ goSetting }: Props): React.ReactNode {
   const router = useRouter()
   function getUserName() {
     return 'admin'
@@ -13,7 +17,7 @@ function OpsFooter(): React.ReactNode {
     <div className="w-full flex justify-between items-center">
       <div>{`${getGreeting()}, ${getUserName()}`}</div>
       <Tooltip content="设置">
-        <Button icon={<IconSetting />} theme="borderless" onClick={() => { router.push('/setting') }} />
+        <Button icon={<IconSetting />} theme="borderless" onClick={goSetting} />
       </Tooltip>
     </div>
   )

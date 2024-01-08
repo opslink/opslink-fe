@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Opslink() {
+function Server() {
   return (
     <div>
-      Opslink
+      Server
     </div>
   );
 }
 
-export default Opslink;
+export default Server;

@@ -1,13 +1,16 @@
 import React, { useRef } from 'react'
 import { Button, Form, Typography } from '@douyinfe/semi-ui'
+import { useRouter } from 'next/router'
 
 const { Title } = Typography
 
 function Login() {
+  const router = useRouter()
   const api = useRef<any>(null)
 
   function handleSubmit(values: { userName: string, password: string }) {
     console.log('🚀 ~ file: index.tsx:10 ~ handleSubmit ~ values:', values)
+    router.push('/')
   }
 
   return (
@@ -24,13 +27,11 @@ function Login() {
         >
           <Form.Input
             placeholder="Please input your username"
-            field="userName"
+            field="name"
             size="large"
             style={{ width: '100%' }}
             label="UserName"
-            rules={[
-              { required: true, message: '请输入用户名' },
-            ]}
+            rules={[{ required: true, message: '请输入用户名' }]}
           />
           <Form.Input
             label="Password"
@@ -39,9 +40,7 @@ function Login() {
             mode="password"
             size="large"
             style={{ width: '100%' }}
-            rules={[
-              { required: true, message: '请输入密码' },
-            ]}
+            rules={[{ required: true, message: '请输入密码' }]}
           />
         </Form>
         <Button
@@ -53,7 +52,6 @@ function Login() {
           }}
         >
           Login
-
         </Button>
       </div>
     </div>
