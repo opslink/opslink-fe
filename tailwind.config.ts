@@ -11,6 +11,12 @@ const config: Config = {
   },
   theme: {
     extend: {
+      colors: {
+        'custom-blue': 'rgba(0,119,250,1)',
+      },
+      backgroundImage: {
+        'login-gradient': `linear-gradient(to right, rgba(0,119,250,1), rgba(255,255,255,0.7))`,
+      },
     },
   },
   plugins: [],
